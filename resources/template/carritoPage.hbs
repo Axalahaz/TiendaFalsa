@@ -1,0 +1,40 @@
+<div class="cart">
+    <div class="cart-compra">
+        <table class="table">
+            <thead> {{!-- encabezado --}}
+                <tr> {{!-- fila --}}
+                    <th>Nombre</th> {{!-- columna --}}
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody> {{!-- cuerpo --}}
+                {{#each carrito}}
+                <tr>
+                    <td class="italic" scope="row">{{this.nombre}}</td>
+                    <td scope="row">    
+                        <button class="id-{{this.id}} btn-disminuye"></button>
+                        {{this.count}}
+                        <button class="id-{{this.id}} btn-aumenta"></button>
+                    </td>
+                    <td scope="row">${{this.total}}</td>
+                    <td scope="rpw"><button class="id-{{this.id}} btn-remove"></button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <div class="subtotal">
+            <span class="subtotal-text"></span>
+            <span>:</span>
+            <span class="subtotal-value">{{ total }}</span>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="btn-volver" class="btn btn-volver"></button>
+        <span>¡Gracias por elegirnos!</span>
+        <button id="btn-procesar" class="btn btn-success"></button>
+    </div>
+</div>

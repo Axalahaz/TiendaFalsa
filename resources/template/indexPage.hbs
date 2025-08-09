@@ -1,0 +1,31 @@
+{{!-- Recibe array de articulos --}}
+<div class="index-page">
+        <button class="btn btn-carrito"></button>
+    <form id="search-form">
+        <div>
+            <input type="search" id="search-box" class="form-control" placeholder="Articulo a buscar...">
+        </div>
+        <div>
+            <select name="orderBy" id="orderBy" class="form-control">
+                <option value="indefinidoPrecio">Ordenar por...</option>
+                <option value="mayorPrecio">Mayor precio</option>
+                <option value="menorPrecio">Menor precio</option>
+            </select>
+        </div>
+        <button class="btn btn-buscar">Buscar</button>
+    </form>
+    <div class="article-list">
+        {{#each articulos}}
+        <div class="article" data-id="{{this.id}}">
+            <div class="image" style="background-image: url({{this.urlImagen}})"></div>
+            <div class="content">
+                <div class="article-title">{{this.nombre}}</div>
+                <div class="article-price">
+                    <span class="article-price-currency">$</span>
+                    <span class="article-prince-value">{{this.precio}}</span>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
