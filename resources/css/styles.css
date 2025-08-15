@@ -4,7 +4,7 @@
 
 /* *Header* */
 header {
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
     text-align: center;
 }
 
@@ -129,6 +129,7 @@ header {
 /* *AriculoPage* */
 .card {
     border: none;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     text-align: center; /* horizontal */
@@ -136,8 +137,6 @@ header {
 }
 
 .card-img {
-    background-color: #399c00;
-    margin-bottom: 30px;
     width: 40%;
     height: 300px;
     background-position: center;
@@ -148,8 +147,8 @@ header {
 
 .card-title {
     width: 40%;
-    margin-bottom: 0;
-    font-size: 200%;
+    margin-top: 20px;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -162,12 +161,14 @@ header {
     margin-top: 10px;
     width: 40%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .card-price {
-    width: 10%;
-    font-size: 10%;
+    width: 50%;
+    font-size: 1em;
+    align-content: center;
 }
 
 .card-nav .btn {
@@ -209,12 +210,10 @@ header {
         width: 80%;
     }
 
-    .card-price {
-        width: 10%;
-        font-size: 10%;
+    .card-nav {
+    width: 80%;
     }
 }
-
 
 /* *CarritoPage */
 .cart-compra {
